@@ -6,7 +6,6 @@
 <title>Mr Nathan's Maths Tuition IOM — 45-Minute Lesson Application</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
   body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
@@ -14,7 +13,6 @@
     background: #f5f7fa;
     padding: 24px 16px;
   }
-
   .page {
     background: #fff;
     max-width: 720px;
@@ -23,13 +21,11 @@
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     overflow: hidden;
   }
-
   .header {
     text-align: center;
     padding: 28px 32px 20px;
     border-bottom: 1.5px solid #dce3f0;
   }
-
   .logo-circle {
     width: 64px; height: 64px;
     border-radius: 50%;
@@ -41,63 +37,26 @@
   .logo-circle span.top { font-size: 7px; color: #1d4e8f; font-style: italic; }
   .logo-circle span.mid { font-size: 11px; font-weight: 700; color: #1d4e8f; letter-spacing: 0.5px; }
   .logo-circle span.bot { font-size: 7px; color: #1d4e8f; font-style: italic; }
-
   .header h1 { font-size: 20px; font-weight: 700; color: #1d4e8f; margin-bottom: 4px; }
   .header .subtitle { font-size: 12px; color: #5a6a8a; letter-spacing: 0.3px; }
-
-  .form-body { padding: 24px 32px; }
-  .field-group { margin-bottom: 16px; }
-
-  label {
-    display: block; font-size: 12px; font-weight: 700;
-    color: #1d4e8f; margin-bottom: 5px; letter-spacing: 0.2px;
-  }
-
-  input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
-    width: 100%; padding: 9px 12px;
-    border: 1px solid #c8d3e8; border-radius: 4px;
-    font-size: 13px; font-family: Arial, Helvetica, sans-serif;
-    color: #1a1a2e; background: #f8fafd;
-    transition: border-color 0.15s; outline: none;
-  }
-  input:focus, select:focus, textarea:focus {
-    border-color: #1d4e8f; background: #fff;
-    box-shadow: 0 0 0 3px rgba(29,78,143,0.1);
-  }
-
-  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .divider { border: none; border-top: 1px solid #dce3f0; margin: 20px 0; }
-
-  .section-label {
-    font-size: 11px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 1px; color: #8a9ab8; margin-bottom: 14px;
-  }
-
-  .sig-note { font-size: 11px; color: #8a9ab8; margin-top: 5px; font-style: italic; }
-
+  .page-body { padding: 24px 32px; }
   .footer-bar {
     background: #eef2f9; border-top: 1px solid #dce3f0;
     padding: 12px 32px; text-align: center; font-size: 12px; color: #5a6a8a;
   }
   .footer-bar strong { color: #1d4e8f; }
-
-  .tc-page .tc-body { padding: 24px 32px; }
-
   .tc-section { margin-bottom: 16px; }
   .tc-section h3 { font-size: 12px; font-weight: 700; color: #1d4e8f; margin-bottom: 5px; }
   .tc-section p { font-size: 12px; color: #3a4a6a; line-height: 1.65; }
-
   .bank-table { width: 100%; border-collapse: collapse; margin: 8px 0 16px; font-size: 12px; }
   .bank-table td { padding: 7px 10px; border: 1px solid #dce3f0; }
   .bank-table td:first-child { font-weight: 700; color: #1d4e8f; background: #f0f4fb; width: 40%; }
   .bank-table td:last-child { color: #1a1a2e; }
-
   .important-note {
     background: #fff8e6; border: 1px solid #f0c040; border-radius: 4px;
     padding: 10px 14px; font-size: 12px; color: #5a4000; line-height: 1.6; margin-bottom: 16px;
   }
   .important-note strong { color: #3a2800; }
-
   .resource-block {
     background: #f0f4fb; border: 1px solid #c8d3e8; border-radius: 6px;
     padding: 14px 16px; margin-bottom: 14px;
@@ -110,28 +69,26 @@
     color: #1d4e8f; text-decoration: none; word-break: break-all;
   }
   .resource-link:hover { text-decoration: underline; }
-
   .tcp-tier-note {
     background: #eef7ee; border: 1px solid #a0cca0; border-radius: 4px;
     padding: 10px 14px; font-size: 12px; color: #2a4a2a; line-height: 1.6; margin-bottom: 14px;
   }
-
+  .divider { border: none; border-top: 1px solid #dce3f0; margin: 20px 0; }
+  .section-label {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; color: #8a9ab8; margin-bottom: 14px;
+  }
   .submit-section {
     padding: 28px 32px 36px;
     background: #f8fafd;
     border-top: 2px solid #1d4e8f;
     text-align: center;
   }
-
-  .submit-section h3 {
-    font-size: 15px; font-weight: 700; color: #1d4e8f; margin-bottom: 10px;
-  }
-
+  .submit-section h3 { font-size: 15px; font-weight: 700; color: #1d4e8f; margin-bottom: 10px; }
   .submit-section p {
     font-size: 12px; color: #5a6a8a; margin-bottom: 20px; line-height: 1.7;
     max-width: 520px; margin-left: auto; margin-right: auto;
   }
-
   .btn-submit {
     display: inline-block; background: #1d4e8f; color: #fff;
     border: none; border-radius: 5px; padding: 14px 36px;
@@ -140,22 +97,19 @@
     text-decoration: none;
   }
   .btn-submit:hover { background: #163d72; }
-
   .tagline {
     font-style: italic; font-size: 11px; color: #8a9ab8;
     text-align: center; margin-top: 12px;
   }
-
   @media (max-width: 560px) {
-    .two-col { grid-template-columns: 1fr; }
-    .form-body, .tc-body, .submit-section { padding-left: 20px; padding-right: 20px; }
-    .footer-bar { padding-left: 20px; padding-right: 20px; }
+    .page-body { padding-left: 20px; padding-right: 20px; }
+    .footer-bar, .submit-section { padding-left: 20px; padding-right: 20px; }
   }
 </style>
 </head>
 <body>
 
-<!-- PAGE 1: Student & Parent Details -->
+<!-- PAGE 1: Welcome -->
 <div class="page">
   <div class="header">
     <div class="logo-circle">
@@ -164,74 +118,23 @@
       <span class="bot">Isle of Man</span>
     </div>
     <h1>Mr Nathan's Maths Tuition IOM</h1>
-    <div class="subtitle">Application Form — 45-Minute Lessons</div>
+    <div class="subtitle">Application Information — 45-Minute Lessons</div>
   </div>
 
-  <div class="form-body">
-    <div class="section-label">Student Details</div>
-
-    <div class="two-col">
-      <div class="field-group">
-        <label>Student Name</label>
-        <input type="text" placeholder="Full name">
-      </div>
-      <div class="field-group">
-        <label>School</label>
-        <input type="text" placeholder="School name">
-      </div>
+  <div class="page-body">
+    <div class="tc-section">
+      <h3>Welcome</h3>
+      <p>Thank you for your interest in maths tuition for your child. Please read through all four pages carefully before clicking the Submit button at the end. The application itself only takes a few minutes to complete.</p>
     </div>
 
-    <div class="two-col">
-      <div class="field-group">
-        <label>Year Group</label>
-        <select>
-          <option value="">Select year group</option>
-          <option>Year 7</option>
-          <option>Year 8</option>
-          <option>Year 9</option>
-          <option>Year 10</option>
-          <option>Year 11</option>
-        </select>
-      </div>
-      <div class="field-group">
-        <label>GCSE Level</label>
-        <select>
-          <option value="">Select level</option>
-          <option>Foundation</option>
-          <option>Intermediate</option>
-          <option>Higher</option>
-        </select>
-      </div>
+    <div class="tc-section">
+      <h3>About the Lessons</h3>
+      <p>All lessons are delivered online via Zoom and last <strong>45 minutes</strong>. The fee per lesson is <strong>£30</strong>. Lessons are tailored to your child's individual needs, working systematically through their GCSE curriculum with a focus on genuine understanding rather than just exam technique.</p>
     </div>
 
-    <div class="two-col">
-      <div class="field-group">
-        <label>Preferred Lesson Day &amp; Time</label>
-        <input type="text" placeholder="e.g. Tuesday 5pm">
-      </div>
-      <div class="field-group">
-        <label>Student Zoom Email Address</label>
-        <input type="email" placeholder="student@email.com">
-      </div>
-    </div>
-
-    <hr class="divider">
-    <div class="section-label">Parent / Guardian Details</div>
-
-    <div class="two-col">
-      <div class="field-group">
-        <label>Parent / Guardian Name</label>
-        <input type="text" placeholder="Full name">
-      </div>
-      <div class="field-group">
-        <label>Parent / Guardian Email Address</label>
-        <input type="email" placeholder="parent@email.com">
-      </div>
-    </div>
-
-    <div class="field-group">
-      <label>Parent / Guardian Mobile Number</label>
-      <input type="tel" placeholder="+44 7xxx xxxxxx">
+    <div class="tc-section">
+      <h3>Initial Assessment Period</h3>
+      <p>The first two lessons are used to assess your child's strengths, areas for development, and learning style, and to ensure that Mr Nathan's approach is the right fit for your child. Both parties are free to conclude the arrangement after this period without further obligation. We find this makes for a much more productive and honest working relationship from the very outset.</p>
     </div>
   </div>
 
@@ -241,7 +144,7 @@
 </div>
 
 <!-- PAGE 2: Terms & Conditions -->
-<div class="page tc-page">
+<div class="page">
   <div class="header">
     <div class="logo-circle">
       <span class="top">Mr. Nathan's</span>
@@ -252,17 +155,7 @@
     <div class="subtitle">45-Minute Lesson Programme</div>
   </div>
 
-  <div class="tc-body">
-    <div class="tc-section">
-      <h3>Lessons &amp; Delivery</h3>
-      <p>All lessons are delivered online via Zoom and last <strong>45 minutes</strong>. The fee per lesson is <strong>£30</strong>. Zoom joining details will be sent by email once a completed application form has been received and your first payment confirmed.</p>
-    </div>
-
-    <div class="tc-section">
-      <h3>Initial Assessment Period</h3>
-      <p>The first two lessons are used to assess your child's strengths, areas for development, and learning style, and to ensure that Mr Nathan's approach is the right fit for your child. Both parties are free to conclude the arrangement after this period without further obligation. We find this makes for a much more productive and honest working relationship from the very outset.</p>
-    </div>
-
+  <div class="page-body">
     <div class="tc-section">
       <h3>Payment</h3>
       <p>To keep everything running smoothly, payment of <strong>£30</strong> is kindly requested at least <strong>24 hours before</strong> each lesson. This simply ensures your child's slot is confirmed and ready to go. Payment is by bank transfer using the details on page 3. If payment has not been received by that point, the lesson will unfortunately need to be rescheduled.</p>
@@ -296,7 +189,7 @@
 </div>
 
 <!-- PAGE 3: Payment & Zoom Access -->
-<div class="page tc-page">
+<div class="page">
   <div class="header">
     <div class="logo-circle">
       <span class="top">Mr. Nathan's</span>
@@ -307,7 +200,7 @@
     <div class="subtitle">45-Minute Lesson Programme</div>
   </div>
 
-  <div class="tc-body">
+  <div class="page-body">
     <div class="tc-section">
       <h3>Zoom Lesson Details</h3>
       <p>Your Zoom meeting link and joining instructions will be sent by email once your completed application form has been received and your first payment has been confirmed.</p>
@@ -323,7 +216,6 @@
         <tr><td>Payment Reference</td><td>Your child's full name</td></tr>
         <tr><td>Amount per lesson</td><td>£30</td></tr>
       </table>
-
       <div class="important-note">
         <strong>Important:</strong> Please use your child's full name as the payment reference and ensure payment of £30 is received at least 24 hours before each lesson. This keeps everything on track and your child's slot secure.
       </div>
@@ -333,8 +225,8 @@
   </div>
 </div>
 
-<!-- PAGE 4: Getting Ready for Your First Lesson + Submit -->
-<div class="page tc-page">
+<!-- PAGE 4: Getting Ready + Submit -->
+<div class="page">
   <div class="header">
     <div class="logo-circle">
       <span class="top">Mr. Nathan's</span>
@@ -345,8 +237,7 @@
     <div class="subtitle">Everything your child needs — all in one place</div>
   </div>
 
-  <div class="tc-body">
-
+  <div class="page-body">
     <div class="tc-section">
       <h3>Step 1 — Purchase Your Child's Revision Tool (TCP)</h3>
       <p>To get the most out of every lesson, I recommend purchasing the Mr Nathan's Maths Revision Tool that matches your child's current GCSE level. This browser-based tool gives your child instant access to hundreds of randomised practice questions, full worked solutions, and everything needed for homework, revision, and exam preparation — all in one place.</p>
@@ -401,17 +292,14 @@
     </div>
 
     <p class="tagline">With the right tools and the right attitude, every student can make real, lasting progress.<br>We look forward to working with you.</p>
-
   </div>
 
-  <!-- SUBMIT SECTION -->
   <div class="submit-section">
     <h3>Ready to Apply?</h3>
-    <p>You have reached the end of the application form. Please click the button below to open the application form — it only takes a few minutes to complete and works on any device.</p>
+    <p>You have read all the information. Please click the button below to complete and submit your application — it only takes a few minutes and works on any device.</p>
     <a class="btn-submit" href="https://docs.google.com/forms/d/e/1FAIpQLSeir-Y90T0tZFpUh_jmASMN82wWwVjx4yl1eWDK6TGRCWTc1w/viewform?usp=publish-editor" target="_blank">Complete &amp; Submit Your Application</a>
     <p style="margin-top:16px; font-size:11px; color:#8a9ab8;">By submitting the form you confirm you have read and agree to the Terms &amp; Conditions on page 2.</p>
   </div>
-
 </div>
 
 </body>
