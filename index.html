@@ -81,22 +81,7 @@
   }
   .footer-bar strong { color: #1d4e8f; }
 
-  .submit-section {
-    padding: 20px 32px 28px; background: #f8fafd; border-top: 1px solid #dce3f0;
-  }
-  .submit-section p { font-size: 12px; color: #5a6a8a; margin-bottom: 14px; line-height: 1.6; }
-
-  .btn-submit {
-    display: inline-block; background: #1d4e8f; color: #fff;
-    border: none; border-radius: 5px; padding: 11px 28px;
-    font-size: 14px; font-weight: 700; cursor: pointer;
-    transition: background 0.15s; font-family: Arial, Helvetica, sans-serif;
-  }
-  .btn-submit:hover { background: #163d72; }
-
   .tc-page .tc-body { padding: 24px 32px; }
-  .tc-page h2 { font-size: 18px; font-weight: 700; color: #1d4e8f; text-align: center; margin-bottom: 4px; }
-  .tc-page .tc-subtitle { font-size: 12px; color: #8a9ab8; text-align: center; margin-bottom: 20px; }
 
   .tc-section { margin-bottom: 16px; }
   .tc-section h3 { font-size: 12px; font-weight: 700; color: #1d4e8f; margin-bottom: 5px; }
@@ -113,14 +98,11 @@
   }
   .important-note strong { color: #3a2800; }
 
-  /* Page 4 resource styles */
   .resource-block {
     background: #f0f4fb; border: 1px solid #c8d3e8; border-radius: 6px;
     padding: 14px 16px; margin-bottom: 14px;
   }
-  .resource-block h4 {
-    font-size: 12px; font-weight: 700; color: #1d4e8f; margin-bottom: 6px;
-  }
+  .resource-block h4 { font-size: 12px; font-weight: 700; color: #1d4e8f; margin-bottom: 6px; }
   .resource-block p { font-size: 12px; color: #3a4a6a; line-height: 1.65; margin-bottom: 6px; }
   .resource-block p:last-child { margin-bottom: 0; }
   .resource-link {
@@ -133,6 +115,31 @@
     background: #eef7ee; border: 1px solid #a0cca0; border-radius: 4px;
     padding: 10px 14px; font-size: 12px; color: #2a4a2a; line-height: 1.6; margin-bottom: 14px;
   }
+
+  .submit-section {
+    padding: 28px 32px 36px;
+    background: #f8fafd;
+    border-top: 2px solid #1d4e8f;
+    text-align: center;
+  }
+
+  .submit-section h3 {
+    font-size: 15px; font-weight: 700; color: #1d4e8f; margin-bottom: 10px;
+  }
+
+  .submit-section p {
+    font-size: 12px; color: #5a6a8a; margin-bottom: 20px; line-height: 1.7;
+    max-width: 520px; margin-left: auto; margin-right: auto;
+  }
+
+  .btn-submit {
+    display: inline-block; background: #1d4e8f; color: #fff;
+    border: none; border-radius: 5px; padding: 14px 36px;
+    font-size: 15px; font-weight: 700; cursor: pointer;
+    transition: background 0.15s; font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+  }
+  .btn-submit:hover { background: #163d72; }
 
   .tagline {
     font-style: italic; font-size: 11px; color: #8a9ab8;
@@ -148,7 +155,7 @@
 </head>
 <body>
 
-<!-- PAGE 1: Application Form -->
+<!-- PAGE 1: Student & Parent Details -->
 <div class="page">
   <div class="header">
     <div class="logo-circle">
@@ -165,19 +172,19 @@
 
     <div class="two-col">
       <div class="field-group">
-        <label for="student-name">Student Name</label>
-        <input type="text" id="student-name" name="student_name" placeholder="Full name" autocomplete="name">
+        <label>Student Name</label>
+        <input type="text" placeholder="Full name">
       </div>
       <div class="field-group">
-        <label for="school">School</label>
-        <input type="text" id="school" name="school" placeholder="School name">
+        <label>School</label>
+        <input type="text" placeholder="School name">
       </div>
     </div>
 
     <div class="two-col">
       <div class="field-group">
-        <label for="year-group">Year Group</label>
-        <select id="year-group" name="year_group">
+        <label>Year Group</label>
+        <select>
           <option value="">Select year group</option>
           <option>Year 7</option>
           <option>Year 8</option>
@@ -187,8 +194,8 @@
         </select>
       </div>
       <div class="field-group">
-        <label for="gcse-level">GCSE Level</label>
-        <select id="gcse-level" name="gcse_level">
+        <label>GCSE Level</label>
+        <select>
           <option value="">Select level</option>
           <option>Foundation</option>
           <option>Intermediate</option>
@@ -199,12 +206,12 @@
 
     <div class="two-col">
       <div class="field-group">
-        <label for="lesson-day">Preferred Lesson Day &amp; Time</label>
-        <input type="text" id="lesson-day" name="lesson_day" placeholder="e.g. Tuesday 5pm">
+        <label>Preferred Lesson Day &amp; Time</label>
+        <input type="text" placeholder="e.g. Tuesday 5pm">
       </div>
       <div class="field-group">
-        <label for="student-email">Student Zoom Email Address</label>
-        <input type="email" id="student-email" name="student_email" placeholder="student@email.com">
+        <label>Student Zoom Email Address</label>
+        <input type="email" placeholder="student@email.com">
       </div>
     </div>
 
@@ -213,42 +220,23 @@
 
     <div class="two-col">
       <div class="field-group">
-        <label for="parent-name">Parent / Guardian Name</label>
-        <input type="text" id="parent-name" name="parent_name" placeholder="Full name">
+        <label>Parent / Guardian Name</label>
+        <input type="text" placeholder="Full name">
       </div>
       <div class="field-group">
-        <label for="parent-email">Parent / Guardian Email Address</label>
-        <input type="email" id="parent-email" name="parent_email" placeholder="parent@email.com">
+        <label>Parent / Guardian Email Address</label>
+        <input type="email" placeholder="parent@email.com">
       </div>
     </div>
 
     <div class="field-group">
-      <label for="parent-mobile">Parent / Guardian Mobile Number</label>
-      <input type="tel" id="parent-mobile" name="parent_mobile" placeholder="+44 7xxx xxxxxx">
-    </div>
-
-    <hr class="divider">
-    <div class="section-label">Agreement</div>
-
-    <div class="field-group">
-      <label for="parent-sig">Parent / Guardian Signature (type full name to sign)</label>
-      <input type="text" id="parent-sig" name="parent_sig" placeholder="Type your full name as signature">
-      <p class="sig-note">By typing your name you confirm you have read, understood, and agree to the Terms &amp; Conditions on page 2.</p>
-    </div>
-
-    <div class="field-group">
-      <label for="form-date">Date</label>
-      <input type="date" id="form-date" name="form_date">
+      <label>Parent / Guardian Mobile Number</label>
+      <input type="tel" placeholder="+44 7xxx xxxxxx">
     </div>
   </div>
 
   <div class="footer-bar">
     Lesson duration: <strong>45 minutes</strong> &nbsp;|&nbsp; Cost per lesson: <strong>£30</strong> &nbsp;|&nbsp; Delivered online via <strong>Zoom</strong>
-  </div>
-
-  <div class="submit-section">
-    <p>Once completed, click the button below to open a pre-filled email to Mr Nathan. Your completed form details will be included automatically.</p>
-    <button class="btn-submit" onclick="submitForm()">Submit Application by Email</button>
   </div>
 </div>
 
@@ -302,7 +290,7 @@
 
     <div class="tc-section">
       <h3>Agreement</h3>
-      <p>By signing and submitting this application form, parents confirm that they have read, understood, and are happy to abide by these Terms &amp; Conditions.</p>
+      <p>By submitting the application form, parents confirm that they have read, understood, and are happy to abide by these Terms &amp; Conditions.</p>
     </div>
   </div>
 </div>
@@ -345,7 +333,7 @@
   </div>
 </div>
 
-<!-- PAGE 4: Getting Ready for Your First Lesson -->
+<!-- PAGE 4: Getting Ready for Your First Lesson + Submit -->
 <div class="page tc-page">
   <div class="header">
     <div class="logo-circle">
@@ -361,7 +349,7 @@
 
     <div class="tc-section">
       <h3>Step 1 — Purchase Your Child's Revision Tool (TCP)</h3>
-      <p>To get the most out of every lesson, I recommend purchasing the Mr Nathan's Maths Revision Tool that matches your child's current GCSE level. This browser-based tool gives your child instant access to hundreds of randomised practice questions, full worked solutions, and a built-in interactive whiteboard — everything needed for lessons, homework, revision, and exam preparation, all in one place.</p>
+      <p>To get the most out of every lesson, I recommend purchasing the Mr Nathan's Maths Revision Tool that matches your child's current GCSE level. This browser-based tool gives your child instant access to hundreds of randomised practice questions, full worked solutions, and everything needed for homework, revision, and exam preparation — all in one place.</p>
       <p style="margin-top:8px;">It is a <strong>one-off purchase of £19.99</strong>. If your child moves to a different tier, the updated tool will be supplied free of charge.</p>
     </div>
 
@@ -408,68 +396,23 @@
 
     <div class="tc-section" style="margin-top:20px;">
       <h3>Step 3 — Before Lesson One</h3>
-      <p>Once your application and first payment have been received, you will be sent your Zoom joining link by email. Please ensure your child has their TCP open and ready before the lesson begins. A quick camera and microphone check beforehand is always a good idea!</p>
+      <p>Once your application and first payment have been received, you will be sent your Zoom joining link by email. A quick camera and microphone check beforehand is always a good idea!</p>
       <p style="margin-top:6px;">The first two lessons will be used to assess your child's strengths and areas for development, and to make sure we are the right fit for each other. Any questions in the meantime — please don't hesitate to get in touch.</p>
     </div>
 
     <p class="tagline">With the right tools and the right attitude, every student can make real, lasting progress.<br>We look forward to working with you.</p>
+
   </div>
+
+  <!-- SUBMIT SECTION -->
+  <div class="submit-section">
+    <h3>Ready to Apply?</h3>
+    <p>You have reached the end of the application form. Please click the button below to open the application form — it only takes a few minutes to complete and works on any device.</p>
+    <a class="btn-submit" href="https://docs.google.com/forms/d/e/1FAIpQLSeir-Y90T0tZFpUh_jmASMN82wWwVjx4yl1eWDK6TGRCWTc1w/viewform?usp=publish-editor" target="_blank">Complete &amp; Submit Your Application</a>
+    <p style="margin-top:16px; font-size:11px; color:#8a9ab8;">By submitting the form you confirm you have read and agree to the Terms &amp; Conditions on page 2.</p>
+  </div>
+
 </div>
 
-<script>
-function submitForm() {
-  var studentName  = document.getElementById('student-name').value.trim();
-  var school       = document.getElementById('school').value.trim();
-  var yearGroup    = document.getElementById('year-group').value;
-  var gcseLevel    = document.getElementById('gcse-level').value;
-  var lessonDay    = document.getElementById('lesson-day').value.trim();
-  var studentEmail = document.getElementById('student-email').value.trim();
-  var parentName   = document.getElementById('parent-name').value.trim();
-  var parentEmail  = document.getElementById('parent-email').value.trim();
-  var parentMobile = document.getElementById('parent-mobile').value.trim();
-  var parentSig    = document.getElementById('parent-sig').value.trim();
-  var rawDate      = document.getElementById('form-date').value;
-
-  var formDate = '';
-  if (rawDate) {
-    var parts = rawDate.split('-');
-    formDate = parts[2] + '/' + parts[1] + '/' + parts[0];
-  }
-
-  if (!studentName || !parentName || !parentEmail) {
-    alert('Please fill in at least the student name, parent name, and parent email before submitting.');
-    return;
-  }
-
-  var subject = 'Application Form — 45-Minute Lessons: ' + studentName;
-
-  var body = 'Dear Mr Nathan,\n\nPlease find below our completed application form for 45-minute maths tuition.\n\n';
-  body += '--- STUDENT DETAILS ---\n';
-  body += 'Student Name: '               + (studentName  || '(not provided)') + '\n';
-  body += 'School: '                     + (school       || '(not provided)') + '\n';
-  body += 'Year Group: '                 + (yearGroup    || '(not provided)') + '\n';
-  body += 'GCSE Level: '                 + (gcseLevel    || '(not provided)') + '\n';
-  body += 'Preferred Lesson Day & Time: '+ (lessonDay    || '(not provided)') + '\n';
-  body += 'Student Zoom Email: '         + (studentEmail || '(not provided)') + '\n\n';
-  body += '--- PARENT / GUARDIAN DETAILS ---\n';
-  body += 'Parent / Guardian Name: '    + (parentName   || '(not provided)') + '\n';
-  body += 'Parent / Guardian Email: '   + (parentEmail  || '(not provided)') + '\n';
-  body += 'Parent / Guardian Mobile: '  + (parentMobile || '(not provided)') + '\n\n';
-  body += '--- AGREEMENT ---\n';
-  body += 'Signature (typed): '         + (parentSig    || '(not provided)') + '\n';
-  body += 'Date: '                      + (formDate     || '(not provided)') + '\n\n';
-  body += 'We confirm we have read, understood, and agree to the Terms & Conditions.\n\n';
-  body += 'Kind regards,\n' + parentName;
-
-  var mailto = 'mailto:MrNathanMaths@proton.me?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-  window.location.href = mailto;
-}
-
-var today = new Date();
-var yyyy = today.getFullYear();
-var mm   = String(today.getMonth() + 1).padStart(2, '0');
-var dd   = String(today.getDate()).padStart(2, '0');
-document.getElementById('form-date').value = yyyy + '-' + mm + '-' + dd;
-</script>
 </body>
 </html>
