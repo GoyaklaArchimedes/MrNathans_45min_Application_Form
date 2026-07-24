@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mr Nathan's Maths Tuition IOM — 45-Minute Lesson Application</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #1a1a2e;
+    background: #f5f7fa;
+    padding: 24px 16px;
+  }
+  .page {
+    background: #fff;
+    max-width: 720px;
+    margin: 0 auto 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+  .header {
+    text-align: center;
+    padding: 28px 32px 20px;
+    border-bottom: 1.5px solid #dce3f0;
+  }
+  .logo-circle {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    border: 2.5px solid #1d4e8f;
+    margin: 0 auto 12px;
+    display: flex; align-items: center; justify-content: center; flex-direction: column;
+    line-height: 1.1;
+  }
+  .logo-circle span.top { font-size: 7px; color: #1d4e8f; font-style: italic; }
+  .logo-circle span.mid { font-size: 11px; font-weight: 700; color: #1d4e8f; letter-spacing: 0.5px; }
+  .logo-circle span.bot { font-size: 7px; color: #1d4e8f; font-style: italic; }
+  .header h1 { font-size: 20px; font-weight: 700; color: #1d4e8f; margin-bottom: 4px; }
+  .header .subtitle { font-size: 12px; color: #5a6a8a; letter-spacing: 0.3px; }
+  .page-body { padding: 24px 32px; }
+  .footer-bar {
+    background: #eef2f9; border-top: 1px solid #dce3f0;
+    padding: 12px 32px; text-align: center; font-size: 12px; color: #5a6a8a;
+  }
+  .footer-bar strong { color: #1d4e8f; }
+  .tc-section { margin-bottom: 16px; }
+  .tc-section h3 { font-size: 12px; font-weight: 700; color: #1d4e8f; margin-bottom: 5px; }
+  .tc-section p { font-size: 12px; color: #3a4a6a; line-height: 1.65; }
+  .tc-section p + p { margin-top: 8px; }
+  .bank-table { width: 100%; border-collapse: collapse; margin: 8px 0 16px; font-size: 12px; }
+  .bank-table td { padding: 7px 10px; border: 1px solid #dce3f0; }
+  .bank-table td:first-child { font-weight: 700; color: #1d4e8f; background: #f0f4fb; width: 40%; }
+  .bank-table td:last-child { color: #1a1a2e; }
+  .important-note {
+    background: #fff8e6; border: 1px solid #f0c040; border-radius: 4px;
+    padding: 10px 14px; font-size: 12px; color: #5a4000; line-height: 1.6; margin-bottom: 16px;
+  }
+  .important-note strong { color: #3a2800; }
+  .resource-block {
+    background: #f0f4fb; border: 1px solid #c8d3e8; border-radius: 6px;
+    padding: 14px 16px; margin-bottom: 14px;
+  }
+  .resource-block h4 { font-size: 12px; font-weight: 700; color: #1d4e8f; margin-bottom: 6px; }
+  .resource-block p { font-size: 12px; color: #3a4a6a; line-height: 1.65; margin-bottom: 6px; }
+  .resource-block p:last-child { margin-bottom: 0; }
+  .resource-link {
+    display: inline-block; font-size: 12px; font-weight: 700;
+    color: #1d4e8f; text-decoration: none; word-break: break-all;
+  }
+  .resource-link:hover { text-decoration: underline; }
+  .tcp-tier-note {
+    background: #eef7ee; border: 1px solid #a0cca0; border-radius: 4px;
+    padding: 10px 14px; font-size: 12px; color: #2a4a2a; line-height: 1.6; margin-bottom: 14px;
+  }
+  .submit-section {
+    padding: 28px 32px 36px;
+    background: #f8fafd;
+    border-top: 2px solid #1d4e8f;
+    text-align: center;
+  }
+  .submit-section h3 { font-size: 15px; font-weight: 700; color: #1d4e8f; margin-bottom: 10px; }
+  .submit-section p {
+    font-size: 12px; color: #5a6a8a; margin-bottom: 20px; line-height: 1.7;
+    max-width: 520px; margin-left: auto; margin-right: auto;
+  }
+  .btn-submit {
+    display: inline-block; background: #1d4e8f; color: #fff;
+    border: none; border-radius: 5px; padding: 14px 36px;
+    font-size: 15px; font-weight: 700; cursor: pointer;
+    transition: background 0.15s; font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+  }
+  .btn-submit:hover { background: #163d72; }
+  .tagline {
+    font-style: italic; font-size: 11px; color: #8a9ab8;
+    text-align: center; margin-top: 12px;
+  }
+  @media (max-width: 560px) {
+    .page-body { padding-left: 20px; padding-right: 20px; }
+    .footer-bar, .submit-section { padding-left: 20px; padding-right: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1: Welcome -->
+<div class="page">
+  <div class="header">
+    <div class="logo-circle">
+      <span class="top">Mr. Nathan's</span>
+      <span class="mid">MATHS<br>TUITION</span>
+      <span class="bot">Isle of Man</span>
+    </div>
+    <h1>Mr Nathan's Maths Tuition IOM</h1>
+    <div class="subtitle">Application Information — 45-Minute Lessons</div>
+  </div>
+
+  <div class="page-body">
+    <div class="tc-section">
+      <h3>Welcome</h3>
+      <p>Welcome, and thank you for considering Mr Nathan's Maths Tuition for your child. What we offer is more than just lessons — it's a complete, structured learning partnership designed to build genuine understanding, confidence and lasting progress in maths.</p>
+      <p>Every student receives personalised one-to-one tuition tailored to their individual needs, together with their own Maths Revision Tool — included free of charge as part of the programme.</p>
+      <p>Please take a few minutes to read through the information below before clicking the Submit button at the end. We look forward to the possibility of working with you.</p>
+    </div>
+
+    <div class="tc-section">
+      <h3>About the Lessons</h3>
+      <p>All lessons are delivered online via Zoom and last <strong>45 minutes</strong>. The fee per lesson is <strong>£30</strong>. Lessons are tailored to your child's individual needs, working systematically through their GCSE curriculum with a focus on genuine understanding rather than just exam technique. Every student also receives Mr Nathan's own Maths Revision Tool as part of the programme — at no extra cost.</p>
+    </div>
+
+    <div class="tc-section">
+      <h3>Initial Assessment Period</h3>
+      <p>The first two lessons are used to assess your child's strengths, areas for development, and learning style, and to ensure that Mr Nathan's approach is the right fit for your child. If after those first two sessions we both feel it's a good match, we just continue. There's no pressure either way — getting the right fit is what matters most.</p>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    Lesson duration: <strong>45 minutes</strong> &nbsp;|&nbsp; Cost per lesson: <strong>£30</strong> &nbsp;|&nbsp; Delivered online via <strong>Zoom</strong>
+  </div>
+</div>
+
+<!-- PAGE 2: Terms & Conditions -->
+<div class="page">
+  <div class="header">
+    <div class="logo-circle">
+      <span class="top">Mr. Nathan's</span>
+      <span class="mid">MATHS<br>TUITION</span>
+      <span class="bot">Isle of Man</span>
+    </div>
+    <h1 style="font-size:18px;">Terms &amp; Conditions of Tuition</h1>
+    <div class="subtitle">45-Minute Lesson Programme</div>
+  </div>
+
+  <div class="page-body">
+    <div class="tc-section">
+      <h3>Payment</h3>
+      <p>To keep everything running smoothly, payment of <strong>£30</strong> is kindly requested at least <strong>24 hours before</strong> each lesson. This simply ensures your child's slot is confirmed and ready to go. Payment is by bank transfer using the details on page 3. If payment has not been received by that point, the lesson will unfortunately need to be rescheduled.</p>
+    </div>
+
+    <div class="tc-section">
+      <h3>Technical Requirements</h3>
+      <p>A stable internet connection and a device with a working camera and microphone will ensure lessons run smoothly. It's worth doing a quick tech check before the first session!</p>
+    </div>
+
+    <div class="tc-section">
+      <h3>Homework &amp; Practice</h3>
+      <p>Homework is set each week to reinforce what we've covered in the lesson, and is best done soon afterwards while everything is still fresh. It serves two important purposes — it tells me how well the material has been understood and helps me plan the direction of future lessons, and it gives your child valuable feedback on their own progress. Homework that isn't completed simply delays that feedback loop, and can mean covering the same ground again rather than moving forward. There's no pressure to be perfect — but a genuine attempt each week makes a real difference.</p>
+    </div>
+
+    <div class="tc-section">
+      <h3>Commitment &amp; Continuation</h3>
+      <p>Tuition works best as a genuine team effort between student, parent, and tutor — always with the student's progress and wellbeing at heart.</p>
+    </div>
+
+    <div class="tc-section">
+      <h3>Communication</h3>
+      <p>All correspondence is by email. Parents and students are warmly encouraged to get in touch between lessons with any questions or concerns — no question is too small.</p>
+    </div>
+
+    <div class="tc-section">
+      <h3>Agreement</h3>
+      <p>By submitting the application form, parents confirm that they have read, understood, and are happy to proceed on this basis.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 3: Payment & Zoom Access -->
+<div class="page">
+  <div class="header">
+    <div class="logo-circle">
+      <span class="top">Mr. Nathan's</span>
+      <span class="mid">MATHS<br>TUITION</span>
+      <span class="bot">Isle of Man</span>
+    </div>
+    <h1 style="font-size:18px;">Payment &amp; Zoom Access</h1>
+    <div class="subtitle">45-Minute Lesson Programme</div>
+  </div>
+
+  <div class="page-body">
+    <div class="tc-section">
+      <h3>Zoom Lesson Details</h3>
+      <p>Your Zoom meeting link and joining instructions will be sent by email once your completed application form has been received and your first payment has been confirmed.</p>
+    </div>
+
+    <div class="tc-section">
+      <h3>Bank Transfer Details</h3>
+      <table class="bank-table">
+        <tr><td>Account Name</td><td>MR FRANCIS X NATHAN</td></tr>
+        <tr><td>Bank</td><td>Isle of Man Bank</td></tr>
+        <tr><td>Sort Code</td><td>55-91-07</td></tr>
+        <tr><td>Account Number</td><td>14020793</td></tr>
+        <tr><td>Payment Reference</td><td>Your child's full name</td></tr>
+        <tr><td>Amount per lesson</td><td>£30</td></tr>
+      </table>
+      <div class="important-note">
+        <strong>Important:</strong> Please use your child's full name as the payment reference and ensure payment of £30 is received at least 24 hours before each lesson. This keeps everything on track and your child's slot secure.
+      </div>
+    </div>
+
+    <p class="tagline">All communication is by email. High standards, clarity, and partnership underpin everything we do.<br>With student effort and parental support, progress is unstoppable.</p>
+  </div>
+</div>
+
+<!-- PAGE 4: Getting Ready + Submit -->
+<div class="page">
+  <div class="header">
+    <div class="logo-circle">
+      <span class="top">Mr. Nathan's</span>
+      <span class="mid">MATHS<br>TUITION</span>
+      <span class="bot">Isle of Man</span>
+    </div>
+    <h1 style="font-size:18px;">Getting Ready for Your First Lesson</h1>
+    <div class="subtitle">Everything your child needs — all in one place</div>
+  </div>
+
+  <div class="page-body">
+    <div class="tc-section">
+      <h3>Step 1 — Your Child's Maths Revision Tool (TCP)</h3>
+      <p>As part of Mr Nathan's Maths Tuition, every student receives their own Maths Revision Tool (TCP) free of charge. This browser-based tool is tailored to your child's GCSE level and gives them instant access to hundreds of randomised practice questions, full worked solutions, and everything needed for homework, revision and exam preparation — all in one place.</p>
+      <p>Your child's personal TCP code will be emailed to you upon confirmation of your first lesson, allowing you to download it free of charge directly from our store. The links to each tier are below so you can see exactly what your child will receive.</p>
+    </div>
+
+    <div class="tcp-tier-note">
+      <strong>Which tool will my child receive?</strong><br>
+      Year 7, 8 &amp; 9 students, and students on the <strong>Foundation</strong> tier, receive the Foundation TCP — it builds the core skills that everything else depends on. Students on <strong>Intermediate</strong> or <strong>Higher</strong> tier receive the tool that matches their current level. If your child moves to a different tier at any point, the updated tool will be provided free of charge.
+    </div>
+
+    <div class="resource-block">
+      <h4>Foundation Tier TCP — Year 7, 8, 9 &amp; Foundation GCSE students</h4>
+      <p>92 randomised question factories covering the full Foundation curriculum. Compatible with AQA, Edexcel, WJEC and IGCSE.</p>
+      <a class="resource-link" href="https://payhip.com/b/YP5Gh" target="_blank">View Foundation TCP → payhip.com/b/YP5Gh</a>
+    </div>
+
+    <div class="resource-block">
+      <h4>Intermediate Tier TCP — Intermediate GCSE students</h4>
+      <p>143 randomised question factories covering the full Intermediate curriculum. Compatible with AQA, Edexcel, WJEC and IGCSE.</p>
+      <a class="resource-link" href="https://payhip.com/b/Pqr2G" target="_blank">View Intermediate TCP → payhip.com/b/Pqr2G</a>
+    </div>
+
+    <div class="resource-block">
+      <h4>Higher Tier TCP — Higher GCSE students</h4>
+      <p>153 randomised question factories covering the full Higher curriculum. Compatible with AQA, Edexcel, WJEC and IGCSE.</p>
+      <a class="resource-link" href="https://payhip.com/b/OKHhq" target="_blank">View Higher TCP → payhip.com/b/OKHhq</a>
+    </div>
+
+    <div class="tc-section" style="margin-top:20px;">
+      <h3>Step 2 — Set Up for Writing During Lessons (Optional)</h3>
+      <p>To get the most out of lessons, your child is welcome to use a pen input device to write and annotate directly on the shared whiteboard during sessions — just as they would on paper. This is entirely optional but many students find it makes lessons feel much more natural and interactive. Students who prefer not to purchase a device are encouraged to work alongside the screen using a notepad and pencil — keeping all working clearly shown, just as in an exam.</p>
+    </div>
+
+    <div class="resource-block">
+      <h4>If your child uses a desktop or laptop computer</h4>
+      <p>A Wacom Intuos Small drawing tablet plugs in via USB and works with any PC or Mac. No special software needed — it simply replaces the mouse for writing and annotating on screen.</p>
+      <a class="resource-link" href="https://estore.wacom.com/en-gb/ctl-4100k-n.html" target="_blank">Wacom Intuos Small (UK Store) — £49.99 → estore.wacom.com/en-gb/ctl-4100k-n.html</a>
+      <p style="margin-top:6px; font-size:11px; color:#5a6a8a; font-style:italic;">If the above shows out of stock, the Bluetooth version is also available: <a class="resource-link" href="https://estore.wacom.com/en-gb/wacom-intuos-small-bluetooth-black-ctl-4100wlk-s.html" target="_blank">Wacom Intuos Small Bluetooth</a></p>
+    </div>
+
+    <div class="resource-block">
+      <h4>If your child uses an iPad</h4>
+      <p>An Apple Pencil-compatible stylus works perfectly for writing directly on the shared screen. This affordable option is compatible with iPad (6th generation and later, 2018–2024).</p>
+      <a class="resource-link" href="https://www.amazon.co.uk/Amazon-Basics-Compatible-Generation-2018-2024/dp/B0DX661V8Y/" target="_blank">Amazon Basics Apple Pencil Compatible Stylus → amazon.co.uk</a>
+    </div>
+
+    <div class="tc-section" style="margin-top:20px;">
+      <h3>Step 3 — Before Lesson One</h3>
+      <p>Once your application and first payment have been received, you will be sent your Zoom joining link and your child's personal TCP code by email. A quick camera and microphone check beforehand is always a good idea!</p>
+      <p style="margin-top:6px;">The first two lessons will be used to assess your child's strengths and areas for development, and to make sure we are the right fit for each other. Any questions in the meantime — please don't hesitate to get in touch.</p>
+    </div>
+
+    <p class="tagline">With the right tools and the right attitude, every student can make real, lasting progress.<br>We look forward to working with you.</p>
+  </div>
+
+  <div class="submit-section">
+    <h3>Ready to Apply?</h3>
+    <p>You have read all the information. Please click the button below to complete and submit your application — it only takes a few minutes and works on any device.</p>
+    <a class="btn-submit" href="https://docs.google.com/forms/d/e/1FAIpQLSeir-Y90T0tZFpUh_jmASMN82wWwVjx4yl1eWDK6TGRCWTc1w/viewform?pli=1" target="_blank">Complete &amp; Submit Your Application</a>
+    <p style="margin-top:16px; font-size:11px; color:#8a9ab8;">By submitting the form you confirm you have read and agree to the Terms &amp; Conditions on page 2.</p>
+  </div>
+</div>
+
+</body>
+</html>
